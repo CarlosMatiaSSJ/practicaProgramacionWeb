@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\controladorGitHub;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,14 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[controladorGitHub::class,'showTabla'])->name('apodoTabla');  
+Route::get('registrar',[controladorGitHub::class,'showFormulario'])->name('apodoFormulario');
 
-Route::get('/forulario', function() {
-    return view('formulario');
-});
 
-Route::get('/forulario', function() {
-    return view('tabla');
-});
+Route::post('guardarPelicula',[controladorGitHub::class,'confirmarFormulario']);

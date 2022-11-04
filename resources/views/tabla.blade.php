@@ -31,4 +31,6 @@
     </tr>
   </tbody>
 </table>
+
+<button><a href="/registrar">Formulario</a></button>
 @stop

@@ -10,8 +10,18 @@ class controladorGitHub extends Controller
     //
     public function confirmarFormulario(validadorFormulario $req){
         
-        return redirect('formulario')->with('confirmación','Información Recibida');
+        return redirect('registrar')->with('confirmacion','Información Recibida');
      
     }
+
+
+    public function showTabla(){
+        return view('tabla');
+    }
+
+    public function showFormulario(){
+        return view('formulario');
+    }
+
 
 }

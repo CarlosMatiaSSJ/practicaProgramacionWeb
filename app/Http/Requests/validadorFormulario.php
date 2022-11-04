@@ -13,7 +13,7 @@ class validadorFormulario extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,9 +24,8 @@ class validadorFormulario extends FormRequest
     public function rules()
     {
         return [
-            //
-            'txtPelicula'=>'required|max:6', 
-            'txtAño'=>'required' 
+            'txtPelicula'=>'required | max:20',
+            'txtAño'=>'required|numeric'
         ];
     }
 }
